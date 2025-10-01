@@ -1,0 +1,190 @@
+
+/* brand slider */
+.outer { 
+    margin:0 auto; max-width:100%;    position: relative;
+}
+#big .item {  
+    padding: 0px; margin:0px; color: #FFF; border-radius: 3px; text-align: center; 
+}
+.owl-theme .owl-nav [class*='owl-'] {
+     transition: all .3s ease;
+ }
+.owl-theme .owl-nav [class*='owl-'].disabled:hover { 
+    background-color: #D6D6D6; 
+}
+#big.owl-theme { 
+    position: relative; 
+}
+#big.owl-theme .owl-next, #big.owl-theme .owl-prev {     background: #ffffff;
+    width: 22px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    margin-top: -20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    border-radius: 50%; }
+#big.owl-theme .owl-prev { left: 10px; }
+#big.owl-theme .owl-next { right: 10px; }
+#thumbs.owl-theme .owl-next, #thumbs.owl-theme .owl-prev { background:#333; }
+.brands-sliderr .brand-slider-item img.brand-image{
+    min-height: 400px;
+    max-height: 401px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.clarks-premier{
+    background-color: #836034;
+}
+.clarks-exotica{
+    background-color: #3d4681;
+}
+.clarks-inn-suites{
+    background-color: #803b80;
+}
+.clarks-residences{
+    background-color: #5b7e42;
+}
+.clarks-inn{
+    background-color: #952531;
+}
+.clarks-inn-express{
+    background-color: #77cbf2;
+}
+.villas-and-suites{
+    background-color: #b2b298;
+}
+.aotel1{
+    background-color: #f16524;
+}
+.aotel2{
+    background-color: #131f33;
+}
+.the-gurmett1{
+    background-color: #22333b;
+}
+.the-gurmett2{
+    background-color: #ef3935;
+}
+.the-gurmett3{
+    background-color: #f2f4f3;
+}
+
+.brands-sliderr .brand-slider-item{
+    position: relative;
+}
+.brands-sliderr .brand-slider-item .brand-item-description{
+    position: absolute;
+    top: 0px;
+    width: calc(100% - 20%);
+    padding: 1rem;
+    color: #fff;
+    border-radius: 0rem 0 1rem 1rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+.brands-sliderr .brand-slider-item .brand-item-description .hotel-brand-name{
+    color:#fff;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 30px;
+    margin-top:2rem
+}
+
+.brands-sliderr .brand-slider-item .brand-item-description .hote-brand-name-logo{
+    width: 185px;
+    filter: brightness(10.5);
+    height: auto;
+    text-align: center;
+    display: inline-block;
+    margin-bottom:1rem;
+}
+.brands-sliderr .brand-slider-item .brand-item-description .brand-description{
+    color:#fff;
+    font-size: 16px;
+}
+
+/* .brands-sliderr .brand-slider-item .hotel-brand-name{
+    position: absolute;
+    top:100px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+} */
+#thumbs {
+    position: absolute;
+    bottom: 0;
+    /* background-color: #000; */
+    background: linear-gradient(358deg, rgba(0, 0, 0, 1) 0%, rgba(96, 95, 95, 0) 83%);
+    height: 200px;
+    padding-top: 110px;
+    padding-left: 100px;
+    padding-right: 100px;
+    z-index: 99;
+    overflow: hidden;
+    width: 100%;
+}
+#thumbs .brand-logo-item img {
+    width: 130px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    filter: brightness(13.5);
+    height: auto;
+}
+#thumbs .brand-logo-item img:hover{
+    cursor: pointer;
+}
+#thumbs .brand-logo-item{
+    text-align: center;
+    position: relative;
+}
+#thumbs .owl-nav, #thumbs .owl-dots{
+    display: none!important;
+}
+#thumbs .brand-logo-item:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    background-color: #fff;
+    right: 0;
+    top: 0;
+}
+
+/* div#thumbs .brand-logo-item:last-child:after {
+    display: none;
+} */
+/* div#thumbs .owl-item.active.current .brand-logo-item img{
+    filter: none;
+} */
+div#thumbs .owl-item.active .brand-logo-item img{
+    filter: none;
+}
+#thumbs .brand-logo-item img:hover, #thumbs .swiper-slide-thumb-active .brand-logo-item img {
+    filter: none;
+}
+
+@media screen and (max-width: 768px) {
+    div#thumbs {
+       
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    div#thumbs .brand-logo-item img {
+        width: 50px;
+    }
+    .brands-sliderr .brand-slider-item img {
+        height: 70vh;
+    }
+    
+}

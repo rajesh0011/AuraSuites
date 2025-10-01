@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",            // Important: tells VS Code root is your base
+    "jsx": "react-jsx",        // Better for modern React / Next.js
+    "paths": {
+      "@/*": ["./*"]           // Allows @/components/... style imports
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

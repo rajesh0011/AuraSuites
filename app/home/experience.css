@@ -1,0 +1,81 @@
+/* experience section css starts here */
+.experience-filter-btns button{
+    border: none;
+    border-radius: 25px;
+    background-color: var(--bg-l-grey);
+    color: var(--primary-color);
+    padding: 9px 25px;
+    margin-right: 10px;
+    font-weight: var(--secondary-font-weight);
+    font-size: 14px;
+}
+.experience-filter-btns button.acitve{
+    background-color: var(--primary-bg);
+    color: var(--secondary-color);
+    border-radius: 25px;
+}
+.experience-section .nav-tabs{
+    border: none;
+}
+.experience-section .nav-tabs .nav-item.show .nav-link,
+.experience-section .nav-tabs .nav-link.active {
+    background-color: var(--primary-bg);
+    color: var(--secondary-color);
+    border-radius: 25px;
+}
+
+.experience-section .nav-tabs .nav-link {
+    border: none;
+    border-radius: 25px;
+    background-color: var(--bg-l-grey);
+    color: var(--primary-color);
+    padding: 4px 25px;
+    margin-right: 10px;
+    font-weight: var(--secondary-font-weight);
+    font-size: 14px;
+}
+
+.experience-section .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: var(--primary-shadow);
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.experience-section .card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.experience-section .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.experience-section .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.experience-section .btn-book {
+    background-color: var(--primary-bg);
+    color: var(--secondary-color);
+    border-radius: 0px;
+    padding: 3px 10px;
+    font-size: 12px;
+    padding: 7px 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .experience-section .nav-tabs .nav-link {
+        margin-bottom: 1rem;
+    }
+    
+}
+
+/* experiece section css ends here */
