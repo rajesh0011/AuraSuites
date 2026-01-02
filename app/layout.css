@@ -502,7 +502,6 @@ font-family: "Poppins";
 .swiper-button-prev:after, .swiper-button-next:after {
     font-size: 20px!important;
     letter-spacing: 0;
-    font-feature-settings: ;
     font-variant: initial;
     line-height: 1;
     text-transform: none !important;
@@ -555,6 +554,7 @@ font-family: "Poppins";
   font-size: 14px;
   color: #ccc;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .hero-content .heading {
@@ -929,7 +929,7 @@ display: block;
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./node_modules/bootstrap/dist/css/bootstrap.min.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************/
-@charset "UTF-8";/*!
+/**@charset "UTF-8";/*!
  * Bootstrap  v5.3.6 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)

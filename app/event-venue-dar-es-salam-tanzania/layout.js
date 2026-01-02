@@ -1,8 +1,8 @@
 
 export const metadata = {
-    metadataBase: new URL('https://www.eckohotels.com'),
+    // metadataBase: new URL('https://www.eckohotels.com'),
     alternates: {
-      canonical: '/contact-us'
+      canonical: '/event-venue-dar-es-salam-tanzania'
      },
     title: 'Meeting & Event Venues in Dar es Salaam | Wedding Halls | Aura Suites',
     keywords : "Hotels",

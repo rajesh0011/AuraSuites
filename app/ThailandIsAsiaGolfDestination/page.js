@@ -8,7 +8,7 @@ export default function BlogsPage() {
                 <div className="global-heading-sec text-center">
                     <h1>Why Thailand Is Asia’s #1 Golf Destination</h1>
                     <p className="my-3">
-                        Thailand has well established itself as the <strong>#1 golf destination</strong> in Asia, and the reason is justifiable. Be it a professional course or the tourist course, the county has it all with its sheer diversity in variety. From the steep slopes of the Chiang Mai courses to the tropical courses of Phuket to the championship-worthy golf course of Pattaya, Thailand offers dynamic options. It has hosted the busiest golf courses, totalling up to 250 well-maintained golf courses, with year-round playing conditions and competitive green fees, an inclination that has attracted golf tourists from all over the world.In this blog, we’ll explore the key reasons Thailand leads Asia’s golf tourism scene and why it's the ultimate destination for anyone passionate about the game.
+                        Thailand has well established itself as the <strong>#1 golf destination</strong> in Asia, and the reason is justifiable. Be it a professional course or the tourist course, the county has it all with its sheer diversity in variety. From the steep slopes of the Chiang Mai courses to the tropical courses of Phuket to the championship-worthy golf course of Pattaya, Thailand offers dynamic options. It has hosted the busiest golf courses, totalling up to 250 well-maintained golf courses, with year-round playing conditions and competitive green fees, an inclination that has attracted golf tourists from all over the world.In this blog, we’ll explore the key reasons Thailand leads Asia’s golf tourism scene and why {`it's`} the ultimate destination for anyone passionate about the game.
 
                     </p>
                 </div>
@@ -129,7 +129,7 @@ export default function BlogsPage() {
                 <strong>Golf Kindle</strong> is an ideal option to visit when seeking a <strong>Thailand golfing experience.</strong> It is your top destination for <strong>golfing in Thailand.</strong> Without a doubt, Golf Kindle will guide you with broad regulations, real-time tee-time schedules, course ratings and tours offered in the Thailand golfing hotspots.
             </p>
             <p>
-                From Phuket’s cliffs to Chiang Mai’s highlands and Pattaya’s championship greens, <strong>Golf Kindle</strong> offers everything you need to plan, play, and enjoy Asia’s #1 golf destination. Whether you're a scratch player or a leisurely enthusiast, this platform ensures your Thailand golf holiday is seamless and memorable.
+                From Phuket’s cliffs to Chiang Mai’s highlands and Pattaya’s championship greens, <strong>Golf Kindle</strong> offers everything you need to plan, play, and enjoy Asia’s #1 golf destination. Whether {`you're`} a scratch player or a leisurely enthusiast, this platform ensures your Thailand golf holiday is seamless and memorable.
             </p>
             <p className="my-2">
 

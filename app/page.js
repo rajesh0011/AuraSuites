@@ -1,4 +1,8 @@
 import ClientWrapper from "./common/ClientWrapper";
-export default function Homepage() {
-  return <ClientWrapper />;
+export default function Home() {
+  return(
+        <>
+          <ClientWrapper />
+        </>
+  );
 }

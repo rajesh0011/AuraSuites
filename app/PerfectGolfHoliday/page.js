@@ -203,7 +203,7 @@ Thinking of <strong>golfing in Thailand?</strong> Timing plays a crucial role in
                 <strong>Golf Kindle</strong> is an ideal option to visit when seeking a <strong>Thailand golfing experience.</strong> It is your top destination for <strong>golfing in Thailand.</strong> Without a doubt, Golf Kindle will guide you with broad regulations, real-time tee-time schedules, course ratings and tours offered in the Thailand golfing hotspots.
             </p>
             <p>
-                From Phuket’s cliffs to Chiang Mai’s highlands and Pattaya’s championship greens, <strong>Golf Kindle</strong> offers everything you need to plan, play, and enjoy Asia’s #1 golf destination. Whether you're a scratch player or a leisurely enthusiast, this platform ensures your Thailand golf holiday is seamless and memorable.
+                From Phuket’s cliffs to Chiang Mai’s highlands and Pattaya’s championship greens, <strong>Golf Kindle</strong> offers everything you need to plan, play, and enjoy Asia’s #1 golf destination. Whether {`you're`} a scratch player or a leisurely enthusiast, this platform ensures your Thailand golf holiday is seamless and memorable.
             </p>
             <p className="my-2">
 

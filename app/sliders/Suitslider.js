@@ -1,10 +1,11 @@
-
+"use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, EffectCreative } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Suitslider() {
     return (
@@ -39,7 +40,7 @@ export default function Suitslider() {
                         },
                         {
                             title: "Club Suite",
-                            image: "/images/Club.jpg",
+                            image: "/images/club.jpg",
                             desc: "Dual-bedroom suites with more spacious living areas and premium amenities",
                         },
                         {
@@ -62,8 +63,8 @@ export default function Suitslider() {
                                         <h3 className="winter-box-heading">{suite.title}</h3>
                                         <p className="winter-box-para">{suite.desc}</p>
                                         <div className="winter-box-btn">
-                                            <a href="#" className="box-btn know-more">Know More</a>
-                                            <a href="#" className="box-btn book-now">Book Now</a>
+                                            <Link href="#" className="box-btn know-more">Know More</Link>
+                                            <Link href="#" className="box-btn book-now">Book Now</Link>
                                         </div>
                                     </div>
                                 </div>

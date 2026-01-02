@@ -2,14 +2,17 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import BookingEnquiryPopup from "../Booking_engine/BookingEnquiryPopup";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [close, setClose] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   function handleMenuToggle() {
     setClose(!close);
   }
   return (
+    <>
     <nav className="navbar navbar-expand-lg p-0 header">
       <div className="container-fluid d-flex justify-content-between align-items-center py-2">
 
@@ -29,10 +32,11 @@ const Header = () => {
         </Link>
 
         {/* Mobile Book Now */}
-        <a className="navbar-toggler book_now order-2 d-lg-none" id="toggleButton1">Book Now</a>
+        <a className="navbar-toggler book_now order-2 d-lg-none" id="toggleButton1"  onClick={() => setShowPopup(true)}>Book Now</a>
+       
 
         {/* Desktop logo */}
-        <a className="navbar-brand d-none d-lg-block" href="/">
+        <Link className="navbar-brand d-none d-lg-block" href="/">
           <Image
             src="/img/Aura-logo.png"
             className="header-logo-black"
@@ -40,7 +44,7 @@ const Header = () => {
             width={300}
             alt="logo"
           />
-        </a>
+        </Link>
 
         {/* Nav items */}
         <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
@@ -53,11 +57,11 @@ const Header = () => {
             &times;
           </button>
           <ul className="navbar-nav" onClick={() => setMenuOpen(false)}>
-             <li className="nav-item"><Link href="#" className="nav-link">Overview</Link></li>
-            <li className="nav-item"><Link href="/suit-rooms-dar-es-salam-tanzania" className="nav-link">Suites</Link></li>
+             <li className="nav-item"><Link href="/" className="nav-link">Overview</Link></li>
+            <li className="nav-item"><Link href="/suites-room-dar-es-salam-tanzania" className="nav-link">Suites</Link></li>
             <li className="nav-item"><Link href='/restaurants-dar-es-salam-tanzania' className='nav-link'>Dining</Link></li>
             <li className="nav-item"><Link href="/event-venue-dar-es-salam-tanzania" className="nav-link">Meetings & Events</Link></li>
-            <li className="nav-item"><Link href="/hotel-offers-dar-es-salam-tanzania" className="nav-link">Offer</Link></li>
+            <li className="nav-item"><Link href="/hotel-offers-dar-es-salam-tanzania" className="nav-link">Offers</Link></li>
             <li className="nav-item"><Link href="/hotel-facilities-dar-es-salam-tanzania" className="nav-link">Facilities</Link></li>
             <li className="nav-item"><Link href="/hotel-gallary-dar-es-salam-tanzania" className="nav-link">Gallery</Link></li>
             <li className="nav-item ml-0"><Link href="/hotel-contact-dar-es-salam-tanzania" className="nav-link">Contact us</Link></li>
@@ -66,10 +70,28 @@ const Header = () => {
 
         </div>
         <ul className="navbar-nav">
-          <li className="nav-item"><a className="nav-link book-now-header">Book Now</a></li>
+          <li className="nav-item">
+            <a
+  className="nav-link book-now-header"
+  onClick={() => setShowPopup(true)}
+>
+  Book Now
+</a>
+          </li>
         </ul>
       </div>
     </nav>
+
+    {showPopup && (
+  <BookingEnquiryPopup
+     propertyName="Aura Suites"
+    mode="header"
+    onClose={() => setShowPopup(false)}
+  />
+)}
+
+</>
+
   );
 };
 

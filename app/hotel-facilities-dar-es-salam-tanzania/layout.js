@@ -1,8 +1,8 @@
 
 export const metadata = {
-    metadataBase: new URL('https://www.eckohotels.com'),
+    // metadataBase: new URL('https://www.eckohotels.com'),
     alternates: {
-      canonical: '/contact-us'
+      canonical: '/hotel-facilities-dar-es-salam-tanzania'
      },
     title: 'Hotels with Swimming Pool | Fitness Centre | near Dar Es Salaam | Aura Suites',
     keywords : "Hotels",

@@ -1,8 +1,8 @@
 
 export const metadata = {
-    metadataBase: new URL('https://www.eckohotels.com'),
+    // metadataBase: new URL('https://www.eckohotels.com'),
     alternates: {
-      canonical: '/contact-us'
+      canonical: '/hotel-contact-dar-es-salam-tanzania'
      },
     title: 'Tanzania, Dar es Salaam Hotel Contact Number and Address - Aura Suites',
     keywords : "Hotels",

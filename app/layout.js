@@ -30,44 +30,39 @@ export const metadata = {
   }
 }
 
+const GTM_ID = 'GTM-NQRH6WNR';
+
 export default function Layout({ children }) {
 
   return (
     <html lang="en" className={montserrat.className}>
        <head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <link rel="icon" type="image/png" href="/images/favicon.png" />
-
-          <script
+        {/* Google Tag Manager Script */}
+        <meta name="google-site-verification" content="kQragmdIyLmHxu7xz5JyyCC6WBbcPXuLrnLK5YY6KWA" />
+        <script
           dangerouslySetInnerHTML={{
             __html: `
-              <!-- ✅ Google Tag Manager Script (Head) -->
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-NQRH6WNR');
+              })(window,document,'script','dataLayer','${GTM_ID}');
             `,
           }}
         />
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="icon" type="image/png" href="/images/favicon.png" />
       </head>
 
       <body>
-         <div
-    dangerouslySetInnerHTML={{
-      __html: `
-        <!-- ✅ Google Tag Manager (noscript) – placed right after <body> -->
-      `,
-    }}
-  />
-        <noscript>
+         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NQRH6WNR"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
+          />
         </noscript>
 
         <Addbootstrap />

@@ -6,7 +6,7 @@ import FilterBar from "../Booking_engine/Filterbar";
 
 import Image from "next/image";
 
-export default function events() {
+export default function Events() {
     const [isVisible, setIsVisible] = useState(false);
     const eventData = [
         {

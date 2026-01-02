@@ -11,7 +11,6 @@ export default function FooterPage() {
   useEffect(() => {
     AOS.init();
   }, []);
-  
   return (
     <footer className="footer bg-grey py-5">
       <div className="container">

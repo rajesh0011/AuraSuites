@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Image from 'next/image';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Link from 'next/link';
 export default function Eventslider() {
 
 
@@ -42,48 +43,59 @@ export default function Eventslider() {
 
   return (
     <>
-      <div className="container mt-4  position-relative">
-        <div className="swiper-button-prev custom-nav"><FaArrowLeft /></div>
-        <div className="swiper-button-next custom-nav"><FaArrowRight /></div>
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          speed={2000}
-          autoplay={{ delay: 2000, disableOnInteraction: false }}
-          spaceBetween={30}
-          slidesPerView={1}
-          pagination={false}
-          loop={false}
-          navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            992: { slidesPerView: 3 },
-          }}
-        >
-          {slides.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="winter-box">
-                <div className="image-overlay-container">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    height={500}
-                    width={500}
-                    className="w-100 primary-radius"
-                  />
-                  <div className="hover-text">
-                    <h3>{item.title} <span>{item.subtitle}</span></h3>
-                    <p>{item.description}</p>
-                    <a href="/events/" className="explore-btn">EXPLORE MORE</a>
+      <section className="your-break meeting-n-event sec-padding pt-3">
+        <div className="container">
+          <div className="global-heading-sec pb-4" data-aos="fade-up">
+            <h2 className="global-heading">meeting & events</h2>
+            <p className="description dining_content">
+              Whether you want to host a wedding, a social gathering, a corporate event, <br />
+              or a meeting, Aura Suites has versatile meeting and event spaces available for your needs.
+            </p>
+          </div>
+          <div className="container mt-4  position-relative">
+            <div className="swiper-button-prev custom-nav"><FaArrowLeft /></div>
+            <div className="swiper-button-next custom-nav"><FaArrowRight /></div>
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              speed={2000}
+              autoplay={{ delay: 2000, disableOnInteraction: false }}
+              spaceBetween={30}
+              slidesPerView={1}
+              pagination={false}
+              loop={false}
+              navigation={{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              }}
+              breakpoints={{
+                768: { slidesPerView: 2 },
+                992: { slidesPerView: 3 },
+              }}
+            >
+              {slides.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="winter-box">
+                    <div className="image-overlay-container">
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        height={500}
+                        width={500}
+                        className="w-100 primary-radius"
+                      />
+                      <div className="hover-text">
+                        <h3>{item.title} <span>{item.subtitle}</span></h3>
+                        <p>{item.description}</p>
+                        <Link href="/events" className="explore-btn">EXPLORE MORE</Link>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

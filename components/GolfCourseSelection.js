@@ -34,7 +34,7 @@ const GolfCourseSelection = () => {
                             Pattaya Country Club is set on over 2,000 rai of gently rolling hills and is one of the nearest golf courses to Pattaya. It’s a great choice for players of all skill levels.
                             Some holes at Pattaya Country Club have two fairways, offering both challenging and safer paths to the green. The greens are protected by bunkers and have uneven surfaces.
                             Unlike many Pattaya courses, water only comes into play on the 17th hole, a par 4. The course covers a large area, so some holes are far apart, leading to long walks and more out-of-bounds (OB) areas.
-                            The last three holes, known as the "amen corner," are the toughest and often lead to unexpected finishes.
+                            The last three holes, known as the{` "amen corner,"`} are the toughest and often lead to unexpected finishes.
                             While the clubhouse is small, the friendly staff and great Thai restaurant make up for it. Overall, Pattaya Country Club offers good value for golfers in the area
 
                         </p>
@@ -56,7 +56,7 @@ const GolfCourseSelection = () => {
                                 {set1 === 'popup2' && <div className="overlay" onClick={() => handleClick('popup2')}>
                                     <p className="popup" onClick={(e) => e.stopPropagation()}>
                                     <button className="close" onClick={() => handleClick('popup2')}>X</button>
-                                    Bangkok Golf Club is just 35 minutes from downtown and was built in the 1990s. It has hosted several professional tournaments, including the Asian Tour's Volvo Masters in 2003. After severe flooding in 2011, the course was rebuilt and reopened in 2012 as a more player-friendly layout. Today, it's well-maintained and managed by a skilled team.
+                                    Bangkok Golf Club is just 35 minutes from downtown and was built in the 1990s. It has hosted several professional tournaments, including the Asian {`Tour's`} Volvo Masters in 2003. After severe flooding in 2011, the course was rebuilt and reopened in 2012 as a more player-friendly layout. Today,{` it's`} well-maintained and managed by a skilled team.
                                     Surrounded by city life, the course offers a peaceful escape behind its high walls. It stretches over 6,800 yards and challenges golfers with narrow fairways, water hazards, and tricky greens.
                                     One of the standout holes is the par-3 11th, featuring an island-style green that demands a confident tee shot. The par-5 9th hole, once ranked among the top 500 holes globally, is another highlight.
                                     The course is known for its fast, undulating greens, and the experienced caddies help read the slopes with ease.

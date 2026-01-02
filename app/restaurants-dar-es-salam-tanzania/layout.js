@@ -1,8 +1,8 @@
 
 export const metadata = {
-    metadataBase: new URL('https://www.eckohotels.com'),
+    // metadataBase: new URL('https://www.eckohotels.com'),
     alternates: {
-      canonical: '/contact-us'
+      canonical: '/restaurants-dar-es-salam-tanzania'
      },
     title: 'Fine Dining Restaurants In Dar Es Salaam | Kinaya Bar | Aura Suites',
     keywords : "Hotels",

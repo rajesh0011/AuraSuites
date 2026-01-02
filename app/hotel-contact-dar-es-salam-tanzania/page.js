@@ -13,7 +13,7 @@ const Contact = () => {
    <div className="container inner_content">
       {/* Page Heading */}
       <div className="text-center mb-5">
-        <h2 className="heading inner_heading">Contact Aura Suites in Dar es Salaam, Tanzania</h2>
+        <h1 className="heading inner_heading">Contact Aura Suites in Dar es Salaam, Tanzania</h1>
         <p className="suit_content">
 Whether you want to book a suite, plan your trip to Dar es Salaam, or inquire about our services, we are always happy to assist you. Just make a call, drop an email or pay us a visit at our location, and our travel desk will do all it takes to help you out!        </p>
       </div>

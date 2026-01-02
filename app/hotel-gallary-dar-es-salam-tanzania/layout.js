@@ -1,8 +1,8 @@
 
 export const metadata = {
-    metadataBase: new URL('https://www.eckohotels.com'),
+    // metadataBase: new URL('https://www.eckohotels.com'),
     alternates: {
-      canonical: '/contact-us'
+      canonical: '/hotel-gallary-dar-es-salam-tanzania'
      },
     title: 'Explore Our Image Gallery and Videos - Aura Suites',
     keywords : "Hotels",

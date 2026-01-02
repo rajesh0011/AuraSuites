@@ -34,12 +34,27 @@ const Footer = () => {
                   <br />
 
                 </p>
+                
               </div>
+              {/* Newsletter Section */}
+                <div className="newslater mt-3">
+                      <h5>Join our news letter</h5>
+                      <div className="input-btn">
+                        <input type="text" placeholder="Enter your email..." className="form-control" />
+                        <button type="button" className="btn btn-primary">
+                          Submit
+                        </button>
+                      </div>
+                    <label className="agree mt-1">
+                      <input type="checkbox" className="checkbox-1"/>
+                           &nbsp; I agree to the <a className="text-primary" href="" >privacy policy</a>.
+                        </label>                 
+                </div>
             </div>
-
             {/* Center: Contact Links */}
             <div className="col-md-4 mb-4 mb-md-0 footer_menu align-items-center">
-              <h5 className="">CONTACT US</h5>
+              <div className="mid-column-data">
+                <h5 className="">CONTACT US</h5>
               <ul className="list-unstyled footer_menu">
                 <li><a href="#" className="text-decoration-none">FAQs</a></li>
                 <li><a href="#" className="text-decoration-none">Terms & Conditions</a></li>
@@ -54,7 +69,7 @@ const Footer = () => {
                   Email: <a href="mailto:stay@aurasuites.co.tz" className="text-primary">stay@aurasuites.co.tz</a>
                 </p>
 
-                <div className="d-flex justify-content-md-end gap-3 align-items-center">
+                <div className="d-flex gap-3 align-items-left">
                   <p className="mb-0">Follow us on</p>
                   <a href="https://www.instagram.com/aura.suites?igsh=ODRpbmppb201b2pj"><FaInstagram className="text-muted" /></a>
                   <a href="https://www.facebook.com/aurasuitestanzania/"><FaFacebookF className="text-muted" /></a>
@@ -64,6 +79,7 @@ const Footer = () => {
                 </div>
                
                 </div>
+              </div>
             </div>
 
             {/* Right: Phone, Email, Social */}
@@ -77,8 +93,11 @@ const Footer = () => {
                   referrerPolicy="no-referrer-when-downgrade">
                 </iframe>
               </div>
+              
             </div>
+            
           </div>
+          
       </footer>
       <div className="copyright-section">
         <p>

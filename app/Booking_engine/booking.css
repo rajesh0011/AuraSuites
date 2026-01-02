@@ -539,7 +539,6 @@ html [type="button"] {
  .booking-form-container {
   background: white;
   padding: 20px;
-  max-width: 1000px;
   margin: auto;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
@@ -2914,11 +2913,25 @@ input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio"
         border: none;
         background-color: transparent;
         box-shadow: none;
+        font-weight: 700;
+        margin-left: 0 !important;
+    }
+
+    .header img {
+        height: auto;
+        width: 31%;
+    }
+
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: var(--swiper-pagination-bottom, -5px);
+    }
+
+    .hero-section .winter-box-btn {
+        text-align: center !important;
     }
 
     nav.navbar {
         padding: 8px 0 !important;
-        background: linear-gradient(179deg, #fff 0%, #605f5f00 83%);
     }
 
     #search a span {
@@ -3137,4 +3150,40 @@ input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio"
     width: 100%;
     margin-top: 10px;
   }
+}
+
+.booking-popup-form .react-datepicker-wrapper {
+    width: 100%;
+}
+.booking-popup-form .modal-content input.form-control,
+.booking-popup-form .modal-content select.form-select,
+.booking-popup-form .modal-content textarea.form-control {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 0;
+    border: 1px solid #a7a7a7ff;
+}
+.booking-popup-form .modal-content .btn-close {
+    color: var(--bs-white);
+    opacity: 1;
+    z-index: 9999;
+    background-color: #1da0da;
+    background-image: none;
+    border-radius: 0%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+.booking-popup-form .modal-content .btn-primary {
+      background-color: #1da0da;
+    border-color: #1da0da;
+    color: var(--bs-white);
+    padding: 10px 20px;
+    border-radius: 0;
 }

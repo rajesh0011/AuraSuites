@@ -1,6 +1,6 @@
 
 
-import Home from '../homepage';
+import HomePage from '../homepage';
 import axios from "axios";
 
 export default async function ContentApi() {
@@ -30,7 +30,7 @@ export default async function ContentApi() {
 
   return (
     <>
-      <Home contentData={contentData} />
+      <HomePage contentData={contentData} />
     </>
   );
 }
