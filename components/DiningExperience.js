@@ -1,9 +1,12 @@
 "use client"
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useRef } from 'react'
+import { useRef } from 'react'
+import BookingEnquiryPopup from '@/app/Booking_engine/BookingEnquiryPopup';
 
 const DiningExperience = () => {
+    const [showPopup, setShowPopup] = useState(false);
 
     const section2Ref = useRef();
     const readMore2Ref = useRef();
@@ -34,20 +37,74 @@ const DiningExperience = () => {
                             </p>
 
                             <div className="winter-box-btn mt-3">
-                                <Link href="#" className="box-btn know-more">
+                                <Link href="https://kinaya.co.tz/" className="box-btn know-more">
                                     Know More
                                 </Link>
-                                <button className="box-btn book-now py-1">
+                                {/* <button className="box-btn book-now py-1" onClick={() => setShowPopup(true)}>
                                     Reserve A Table
-                                </button>
+                                </button> */}
+                                                        <Link
+                                href="https://mail.google.com/mail/?view=cm&to=stay@aurasuites.co.tz"
+                                target="_blank"
+                                className="box-btn book-now py-2 mail-phone-desktop  onClick={() => setShowPopup(true)}"
+                            >
+                                Reserve A Table
+                            </Link>
+                           
+                           {/* Mobile (Call) */}
+                            <Link
+                            href="tel:+255746941286"
+                            className="box-btn book-now py-1 mail-phone-mobile"
+                            >
+                            Reserve A Table
+                            </Link>
+                           
+
                             </div>
                         </div>
                         <div className="hero-image col-md-5 col-12 p-0">
-                            <Image height={500} width={600} quality={100} className="img_banner" src="/images/banner2.png" alt="Dar Es Salaam view" />
+                            <Image height={500} width={600} quality={100} className="img_banner" src="/images/banner2.png" alt="premium-suites-in-dar-es-salaam-tanzia" title="Comfortable Premium Suites in Dar es Salaam, Tanzania at Aura Suites" />
                         </div>
                     </div>
                 </div>
             </section>
+
+             {showPopup && (
+              <BookingEnquiryPopup
+                 propertyName="Aura Suites"
+                mode="header"
+                onClose={() => setShowPopup(false)}
+              />
+            )}
+
+            <style>
+      {
+        `
+       
+              
+         .mail-phone-desktop{
+          display:inline
+            //   padding: 7px 10px !important;
+         }
+
+         .mail-phone-mobile{
+          display:none
+         }
+
+         @media(max-width: 768px){
+            .mail-phone-desktop{
+              display:none
+            }
+
+            .mail-phone-mobile{
+              display:inline
+            }
+
+           
+         }
+        `
+      }
+    </style>
         </>
     )
 }

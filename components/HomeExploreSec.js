@@ -20,7 +20,13 @@ const HomeExploreSec = () => {
                             with Aura Suites.
                         </p>
                         <div className="winter-box-btn">
-                            <Link href="#" className="box-btn book-now">Know More</Link>
+                            {/* <Link href="#" className="box-btn book-now">Know More</Link> */}
+
+                            <Link  href="https://mail.google.com/mail/?view=cm&to=stay@aurasuites.co.tz"
+                                             target="_blank" className="box-btn book-now mail-phone-desktop">Know More</Link>
+
+                                             <Link   href="tel:+255746941286"
+                                             target="_blank" className="box-btn book-now mail-phone-mobile">Know More</Link>
                         </div>
                     </div>
 
@@ -41,23 +47,30 @@ const HomeExploreSec = () => {
                                     title: 'Coco Beach',
                                     image: '/images/exploring2.jpg',
                                     link: '#',
+                                    imgAlt:"Best-hotels-in-dar-es-salaam-coco-beach",
+                                    imgTitle:"Stay Near Coco Beach at One of the Best Hotels in Dar es Salaam "
                                 },
                                 {
                                     title: 'Central Business District',
                                     image: '/img/exploring.jpg',
                                     link: '#',
+                                    imgAlt:"best-corporate-suites-in-tanzania-dar-es-salaam",
+                                    imgTitle:"Corporate Stay Options at the Best Suites in Dar es Salaam, Tanzania "
                                 },
                                 {
                                     title: 'Attached Facilities',
                                     image: '/images/exploring1.jpg',
                                     link: '#',
+                                    imgAlt:"aura-suites-facilities-dar-es-salaam-tanzania",
+                                    imgTitle:"Modern Facilities at Aura Suites in Dar es Salaam, Tanzania"
                                 },
                             ].map((place, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="card-overlay-box">
                                         <Image
                                             src={place.image}
-                                            alt={place.title}
+                                            alt={place.imgAlt}
+                                            title={place.imgTitle}
                                             width={500}
                                             height={500}
                                             className="card-image"
@@ -75,6 +88,42 @@ const HomeExploreSec = () => {
                     </div>
                 </div>
             </section>
+
+
+
+
+            <style>
+      {
+        `
+       
+              
+         .mail-phone-desktop{
+          display:inline
+         }
+
+         .mail-phone-mobile{
+          display:none
+         }
+
+         @media(max-width: 768px){
+            .mail-phone-desktop{
+              display:none
+            }
+
+            .mail-phone-mobile{
+              display:inline
+            }
+
+            //  .winter-box-btn {
+            //     display: flex;
+            //     align-items: revert;
+            //     flex-direction: row;
+            //     justify-content: center;
+            // }
+         }
+        `
+      }
+    </style>
     </>
   )
 }

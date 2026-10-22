@@ -4,8 +4,15 @@ import { useState } from "react";
 import { BookingEngineProvider } from "../context/BookingEngineContext";
 import FilterBar from "../Booking_engine/Filterbar";
 import Amenities from "../Booking_engine/Amenities";
+import Link from "next/link";
+import BookingEnquiryPopup from "../Booking_engine/BookingEnquiryPopup";
+ function handleMenuToggle() {
+    setClose(!close);
+  }
 
 export default function Suits() {
+
+  let [showPopup, setShowPopup] = useState(false);
   let [less, more] = useState({});
   function readmore(index) {
     more(function (prev) {
@@ -25,6 +32,10 @@ export default function Suits() {
       content:
         "a private balcony overlooking the city skyline, a dining table, a work desk, a couch, a coffee table, and a kitchen. The interiors of these suites exude minimalist luxury and make you want to stay a little longer. We have 30 of these suites at our property.",
       button: "Book Now",
+      roomType: "Deluxe suite (1 Bedroom):",
+      roomPrice: "USD 110",
+      extraPerson:"",
+      extraPrice:"",
       link: "#",
     },
     {
@@ -36,6 +47,10 @@ export default function Suits() {
       content:
         "a private balcony, a kitchen, plush beds, a work desk in each bedroom, and more. There are 20 of these suites in our inventory, and they’re our most booked category of suites, so they get filled pretty fast.",
       button: "Book Now",
+      roomType: "Club suite (2 Bedroom):",
+      roomPrice: "USD 175 (for 3 pax)",
+      extraPerson: "Extra person:",
+      extraPrice: "USD 30 per person",
       link: "#",
     },
     {
@@ -47,6 +62,10 @@ export default function Suits() {
       content:
         "a dining table and work desk, a large private balcony, a kitchen, a couch, and top-of-the-line amenities. Just like Club Suites, these are also limited in numbers, with only 20 such suites at our hotel in Dar es Salaam, Tanzania.",
       button: "Book Now",
+      roomType: "Platinum suite (3 Bedroom):",
+      roomPrice: "USD 220 (for 4 pax)",
+      extraPerson: "Extra person:",
+      extraPrice: "USD 30 per person",
       link: "#",
     },
   ];
@@ -103,16 +122,49 @@ export default function Suits() {
                       {detail.content}
                     </p>
                   )}
+
+                  <div className="my-4 price-rate-suits">
+                     <p className="w-100 text-left"> <strong>{detail.roomType}</strong> <span> {detail.roomPrice}</span></p>
+                     <p className="w-100"> <strong>{detail.extraPerson} </strong> <span>{detail.extraPrice}</span> </p>
+                  </div>
                   <div className="rooms-card-btn">
                     <button className="readmore1" onClick={() => readmore(index)}>
                         {" "}
                         {less[index] ? "Read Less" : "Read More"}
                     </button>
-                    <div className="winter-box-btn">
+                    {/* <div className="winter-box-btn">
                         <a href={detail.link} className="box-btn book-now">
                         {detail.button}
                         </a>
-                    </div>
+                    </div> */}
+
+
+
+                    
+
+            <div className="winter-box-btn">
+              {/* Desktop - Email */}
+                      
+
+             <Link
+                href="https://www.swiftbook.io/inst/#home?propertyId=683MjQtJhLD4VkO2NM3U6SC7gypDrc6S6Y6NjieOzNTM=&JDRN=Y"
+                target="_blank"
+                className="box-btn book-now mail-phone-desktop"
+              >
+                Book Now
+              </Link>
+
+              {/* Mobile - Call */}
+              <Link
+                href="https://www.swiftbook.io/inst/#home?propertyId=683MjQtJhLD4VkO2NM3U6SC7gypDrc6S6Y6NjieOzNTM=&JDRN=Y"
+                target="_blank"
+                className="box-btn book-now mail-phone-mobile"
+              >
+                Book Now
+              </Link>
+            </div>
+
+
                   </div>
                  
                 </div>
@@ -122,6 +174,48 @@ export default function Suits() {
         </div>
       </div>
       <Amenities />
+   
+
+{showPopup && (
+  <BookingEnquiryPopup
+    propertyName="Aura Suites"
+    mode="header"
+    onClose={() => setShowPopup(false)}
+  />
+)}
+
+        <style>
+      {
+        `
+       
+              
+         .mail-phone-desktop{
+          display:inline
+         }
+
+         .mail-phone-mobile{
+          display:none
+         }
+
+         @media(max-width: 768px){
+            .mail-phone-desktop{
+              display:none
+            }
+
+            .mail-phone-mobile{
+              display:inline
+            }
+
+            //  .winter-box-btn {
+            //     display: flex;
+            //     align-items: revert;
+            //     flex-direction: row;
+            //     justify-content: center;
+            // }
+         }
+        `
+      }
+    </style>
     </>
   );
 }

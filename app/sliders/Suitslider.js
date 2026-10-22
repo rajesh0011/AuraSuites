@@ -9,6 +9,7 @@ import Link from 'next/link';
 
 export default function Suitslider() {
     return (
+        <>
         <section className="your-break sec-padding pt-3">
             <div className="container">
                 <div className="global-heading-sec pb-4" data-aos="fade-up">
@@ -36,16 +37,34 @@ export default function Suitslider() {
                         {[{
                             title: "Deluxe Suite",
                             image: "/images/Deluxe.jpg",
+                            imgAlt:"Best-Hotel-in-Dar-es-salaam-deluxe-suite",
+                            imgTitle:"Best Hotel in Dar es Salaam| Deluxe Suite at Aura Suites Tanzania",
+                            roomType: "Deluxe suite (1 Bedroom):",
+                            roomPrice: "USD 110",
+                            extraPerson:"",
+                            extraPrice:"",
                             desc: "Single bedroom suites with exceptional interiors and sophisticated design",
                         },
                         {
                             title: "Club Suite",
                             image: "/images/club.jpg",
+                            imgAlt:"Best-Hotel-in-Dar-es-salaam-club-suite",
+                            imgTitle:"Enjoy a luxurious stay at the best hotel in Dar es Salaam with Aura Suites",
+                            roomType: "Club suite (2 Bedroom):",
+                            roomPrice: "USD 175 (for 3 pax)",
+                            extraPerson: "Extra person:",
+                            extraPrice: "USD 30 per person",
                             desc: "Dual-bedroom suites with more spacious living areas and premium amenities",
                         },
                         {
                             title: "Platinum Suite",
                             image: "/images/Platinum.jpg",
+                             imgAlt:"best-hotels-in-dar-es-salaam-platinum-suites",
+                            imgTitle:"Premium Platinum Suite Stay at One of the Best Hotels in Dar es Salaam",
+                            roomType: "Platinum suite (3 Bedroom):",
+                            roomPrice: "USD 220 (for 4 pax)",
+                            extraPerson: "Extra person:",
+                            extraPrice: "USD 30 per person",
                             desc: "Triple-bedroom suites with top-of-the-line fixtures, more living space, and luxe interiors",
                         },
 
@@ -54,7 +73,8 @@ export default function Suitslider() {
                                 <div className="winter-box">
                                     <Image
                                         src={suite.image}
-                                        alt={`${suite.title} image`}
+                                        alt={suite.imgAlt}
+                                        title={suite.imgTitle}
                                         height={500}
                                         width={500}
                                         className="w-100 primary-radius"
@@ -62,9 +82,17 @@ export default function Suitslider() {
                                     <div className="winter-box-content">
                                         <h3 className="winter-box-heading">{suite.title}</h3>
                                         <p className="winter-box-para">{suite.desc}</p>
+                                        <div className="my-4 price-rate-suits">
+                                            <p className="w-100 text-left"> <strong>{suite.roomType}</strong> <span> {suite.roomPrice}</span></p>
+                                            <p className="w-100"> <strong>{suite.extraPerson} </strong> <span>{suite.extraPrice}</span> </p>
+                                        </div>
                                         <div className="winter-box-btn">
-                                            <Link href="#" className="box-btn know-more">Know More</Link>
-                                            <Link href="#" className="box-btn book-now">Book Now</Link>
+                                            <Link href="/suites-room-dar-es-salam-tanzania" className="box-btn know-more">Know More</Link>
+                                            <Link href="https://www.swiftbook.io/inst/#home?propertyId=683MjQtJhLD4VkO2NM3U6SC7gypDrc6S6Y6NjieOzNTM=&JDRN=Y"
+                                             target="_blank" className="box-btn book-now mail-phone-desktop">Book Now</Link>
+
+                                             <Link href="https://www.swiftbook.io/inst/#home?propertyId=683MjQtJhLD4VkO2NM3U6SC7gypDrc6S6Y6NjieOzNTM=&JDRN=Y"
+                                             target="_blank" className="box-btn book-now mail-phone-mobile">Book Now</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -74,5 +102,43 @@ export default function Suitslider() {
                 </div>
             </div>
         </section>
+
+
+
+
+
+         <style>
+      {
+        `
+       
+              
+         .mail-phone-desktop{
+          display:inline
+         }
+
+         .mail-phone-mobile{
+          display:none
+         }
+
+         @media(max-width: 768px){
+            .mail-phone-desktop{
+              display:none
+            }
+
+            .mail-phone-mobile{
+              display:inline
+            }
+
+            //  .winter-box-btn {
+            //     display: flex;
+            //     align-items: revert;
+            //     flex-direction: row;
+            //     justify-content: center;
+            // }
+         }
+        `
+      }
+    </style>
+        </>
     )
 }

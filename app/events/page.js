@@ -65,7 +65,7 @@ export default function Events() {
                                         </div>
                                     </div>
                                     <div className="right col-lg-7 col-12 p-0">
-                                        <img src={item.image} alt={item.title} />
+                                        <img src={item.image} alt={item.title} title={item.title} />
                                     </div>
                                     </div>
                                 </>
@@ -73,7 +73,7 @@ export default function Events() {
                                 <>
                                  <div className="row">
                                     <div className="right col-lg-7 col-12 p-0">
-                                        <img src={item.image} alt={item.title} />
+                                        <img src={item.image} alt={item.title} title={item.title} />
                                     </div>
                                     <div className="col-lg-5 col-12 p-0">
                                         <div className="left hero-content">

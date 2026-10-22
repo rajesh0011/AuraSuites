@@ -12,29 +12,33 @@ export default function Eventslider() {
 
   const slides = [
     {
-      src: "/images/Metting.jpg",
-      alt: "Corporate Events",
+      src: "/images/Grand-Celestial-Hall.png",
+      alt: "Corporate-meetings-venue-aura-suites",
       title: "Celestial Grand",
+      imgTitle:"Corporate Meeting Venue at Aura Suites with Professional Setup ",
       // subtitle: "",
       description: "Our largest banquet hall with a capacity to accommodate up to 320 guests. Perfect for grand weddings and large social gatherings."
     },
     {
-      src: "/images/Metting1.jpg",
-      alt: "Weddings",
+      src: "/images/Celestial-Hall.png",
+      alt: "corporate-venues-in tanzania-dar-es-salaam ",
+      imgTitle:"Business Event Space at Leading Corporate Venues in Dar es Salaam, Tanzania ",
       title: "Celestial",
       // subtitle: "RECEPTIONS",
       description: "A spacious banquet hall with a capacity of up to 130 guests and all modern amenities. Suitable for weddings, parties, conferences, etc."
     },
     {
-      src: "/images/Conference.jpg",
+      src: "/images/Galaxy-conference-Hall.png",
       alt: "Private Parties",
+        imgTitle:"Private Parties",
       title: "Galaxy",
       // subtitle: "GATHERINGS",
       description: "Another one of our versatile banquets suitable for parties, weddings, and conferences. Accommodates up to 120 guests."
     },
     {
-      src: "/images/orbit.jpg",
+      src: "/images/Orbit2.png",
       alt: "Corporate Parties",
+        imgTitle:"Corporate Parties",
       title: "Orbit",
       // subtitle: "PARTIES",
       description: "A conference hall with all business-friendly features and a seating capacity of up to 150 guests for corporate events."
@@ -79,6 +83,7 @@ export default function Eventslider() {
                       <Image
                         src={item.src}
                         alt={item.alt}
+                        title={item.title}
                         height={500}
                         width={500}
                         className="w-100 primary-radius"
@@ -86,7 +91,7 @@ export default function Eventslider() {
                       <div className="hover-text">
                         <h3>{item.title} <span>{item.subtitle}</span></h3>
                         <p>{item.description}</p>
-                        <Link href="/events" className="explore-btn">EXPLORE MORE</Link>
+                        <Link href="/event-venue-dar-es-salam-tanzania" className="explore-btn">EXPLORE MORE</Link>
                       </div>
                     </div>
                   </div>

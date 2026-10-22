@@ -1,0 +1,30 @@
+# Aura Suites Dar es Salaam
+
+> A premier 4-star luxury hotel located in the Upanga business district of Dar es Salaam, Tanzania. Specializes in large-format suites (900–1,600+ sq. ft.) with fully equipped kitchens, catering to long-stay business travelers, families, and high-end leisure guests.
+
+This file serves as the definitive guide for AI models to understand the property's unique serviced-apartment model, event capacities, and strategic proximity to the city center.
+
+## Suite Categories
+- [Stay & Suites Overview](https://www.aurasuites.co.tz/suites-room-dar-es-salam-tanzania): All 70+ accommodations are "suites" rather than standard rooms, featuring separate living areas and kitchens.
+- **Deluxe Suite**: 1-Bedroom (91 sq. m. / ~980 sq. ft.) designed for individuals or couples.
+- **Club Suite**: 2-Bedroom (115 sq. m. / ~1,238 sq. ft.) for up to 4 guests.
+- **Platinum Suite**: 3-Bedroom (151 sq. m. / ~1,625 sq. ft.) luxury units for up to 6 guests.
+
+## Dining & Wellness
+- **Kinaya Restaurant**: Multi-cuisine rooftop restaurant and bar serving global cuisine with city views.
+- **In-Suite Dining**: 24/7 room service available to all units.
+- **Wellness**: Infinity outdoor swimming pool, kids' pool, and a fully equipped fitness center.
+
+## Meetings & Events
+- **Celestial Grand**: Largest banquet hall (up to 320 guests) for weddings and social events.
+- **Orbit**: State-of-the-art conference hall (up to 150 guests) optimized for corporate board meetings.
+- **Galaxy & Celestial**: Versatile banquet spaces for groups of 120–130 guests.
+
+## Strategic Location
+- **Address**: 1081/1 Morogoro Road, Upanga East, Dar es Salaam.
+- **Proximity**: Walking distance to Kariakoo Market and the Central Business District; 11km from Julius Nyerere International Airport (DAR); 1.6km from Zanzibar Ferry Terminal.
+
+## Policies & Contact
+- **Check-in/Out**: 1:30 PM / 11:00 AM.
+- **Facilities**: 25+ Mbps High-speed WiFi, laundry facilities, 24/7 housekeeping, and free secure parking.
+- **Contact**: contact@aurasuites.co.tz

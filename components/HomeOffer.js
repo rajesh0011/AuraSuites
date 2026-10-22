@@ -21,6 +21,8 @@ const HomeOffer = () => {
   const cityId = '0';
 
   const offers = [
+
+
     // {
     //   propertyOfferId: 'OFR001',
     //   offerFlag: 'NY2026',
@@ -30,6 +32,18 @@ const HomeOffer = () => {
     //   desc:
     //     "Celebrate the arrival of 2026 in style at Aura Suites with an unforgettable New Year’s Eve Buffet Dinner at Kinaya Restaurant & Bar! Join us on December 31st from 7 PM to 11 PM for a night featuring a lavish buffet, stunning city views, live music, and complimentary mocktails to toast to the new year."
     // },
+
+
+    // {
+    //   propertyOfferId: 'OFR001',
+    //   offerFlag: 'VALENTINE',
+    //   offerName: 'Valentine Offer',
+    //   title: 'Valentine offer',
+    //   image: '/img/Valentine-offer.png',
+    //   desc:
+    //     "Experience an intimate Valentine’s dinner under the stars at Aura Suites! Enjoy a 6-course menu, champagne, and live music for TZS 150,000 per couple. Book your romantic evening now!"
+    // },
+
     {
       propertyOfferId: 'OFR002',
       offerFlag: 'WEEKEND',
@@ -95,6 +109,7 @@ const HomeOffer = () => {
                     <Image
                       src={offer.image}
                       alt={offer.title}
+                      title={offer.offerName}
                       height={500}
                       width={500}
                       className="w-100 primary-radius"
@@ -115,12 +130,18 @@ const HomeOffer = () => {
                         </Link>
 
                         {/* ✅ Book Now Button */}
-                        <button
+                        {/* <button
                           className="box-btn book-now py-1"
                           onClick={() => handleBookNow(offer)}
                         >
                           Book Now
-                        </button>
+                        </button> */}
+
+                        <Link  href="https://www.swiftbook.io/inst/#home?propertyId=683MjQtJhLD4VkO2NM3U6SC7gypDrc6S6Y6NjieOzNTM=&JDRN=Y"
+                         target="_blank" className="box-btn book-now mail-phone-desktop">Book Now</Link>
+
+                         <Link href="https://www.swiftbook.io/inst/#home?propertyId=683MjQtJhLD4VkO2NM3U6SC7gypDrc6S6Y6NjieOzNTM=&JDRN=Y"
+                            target="_blank" className="box-btn book-now py-1 mail-phone-mobile">Book Now</Link>
                       </div>
                     </div>
                   </div>
@@ -141,6 +162,42 @@ const HomeOffer = () => {
           onClose={() => setShowPopup(false)}
         />
       )}
+
+
+
+
+           <style>
+      {
+        `
+       
+              
+         .mail-phone-desktop{
+          display:inline
+         }
+
+         .mail-phone-mobile{
+          display:none
+         }
+
+         @media(max-width: 768px){
+            .mail-phone-desktop{
+              display:none
+            }
+
+            .mail-phone-mobile{
+              display:inline
+            }
+
+            //  .winter-box-btn {
+            //     display: flex;
+            //     align-items: revert;
+            //     flex-direction: row;
+            //     justify-content: center;
+            // }
+         }
+        `
+      }
+    </style>
     </>
   );
 };

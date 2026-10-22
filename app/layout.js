@@ -22,8 +22,8 @@ export const metadata = {
   alternates: {
     canonical: '/'
   },
-  title: 'Hotels in Dar es Salaam, Tanzania near Airport - Aura Suites',
-  description:"Book your stay at Aura Suites, a top hotel in Dar es Salaam, Tanzania near the airport. Enjoy spacious suite rooms, modern amenities, and convenient access for business or leisure travel.", 
+  title: 'Hotels in Dar es Salaam, Tanzania - Aura Suites',
+  description:"Looking for the best hotels in Dar es Salaam, Tanzania? Aura Suites offers modern rooms, prime location, comfortable amenities, and a relaxing stay ideal for business and leisure travelers.", 
   openGraph: {
     title: 'The Aura Suits Hotels',
     description:"The Aura Suits Hotels Description", 
@@ -53,6 +53,7 @@ export default function Layout({ children }) {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <link rel="icon" type="image/png" href="/images/favicon.png" />
+        <meta name="robots" content="index, follow" />
       </head>
 
       <body>

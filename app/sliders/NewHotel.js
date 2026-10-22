@@ -8,22 +8,45 @@ import 'swiper/css';
 import 'yet-another-react-lightbox/styles.css';
 import "photoswipe/dist/photoswipe.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import 'swiper/css';
 import 'swiper/css/navigation';
 import Image from 'next/image';
 
 const imagePairs = [
-  ["/images/banner.jpg", "/images/banner2.png"],
-  ["/images/Club.jpg", "/images/Deluxe.jpg"],
-  ["/images/Metting.jpg", "/images/Metting1.jpg"],
-  ["/images/gallery1.jpg", "/images/gallery8.jpg"],
-  ["/images/gallery3.jpg", "/images/gallery4.jpg"],
-  ["/images/gallery5.jpg", "/images/gallery6.jpg"],
+  [
+    { src: "/images/banner.jpg", alt: "Hotel Banner", title: "Aura Suites Banner" },
+    { src: "/images/banner2.png", alt: "Luxury Room View", title: "Aura Suites Room" }
+  ],
+  [
+    { src: "/images/Club.jpg", alt: "Club Room", title: "Club Room Interior" },
+    { src: "/images/Deluxe.jpg", alt: "Deluxe Room", title: "Deluxe Room Interior" }
+  ],
+  [
+    { src: "/images/Metting.jpg", alt: "Meeting Room", title: "Conference Space" },
+    { src: "/images/Metting1.jpg", alt: "Meeting Hall", title: "Business Meeting Area" }
+  ],
+  [
+    { src: "/images/gallery1.jpg", alt: "Hotel Lobby", title: "Main Lobby" },
+    { src: "/images/gallery8.jpg", alt: "Reception Area", title: "Reception Desk" }
+  ],
+  [
+    { src: "/images/gallery3.jpg", 
+      alt: "Comfortable-gym-area-in-hotel-in-dar-es-salaam-with-modern-fitness-equipment", 
+      title: "Well-Appointed Corporate Suites at Aura Suites Dar es Salaam " },
+      
+    { src: "/images/gallery4.jpg", alt: "Buffet Setup", title: "Buffet Area" }
+  ],
+  [
+    { src: "/images/gallery5.jpg", alt: "Exterior View", title: "Hotel Exterior" },
+    { src: "/images/gallery6.jpg", 
+      alt: "Comfortable-gym-area-in-hotel-in-dar-es-salaam-with-modern-fitness-equipment", 
+      title: "well equipped gym area in a hotel in Dar es Salaam " }
+  ],
 ];
 
 export default function NewHotelSlider() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+
   const flatImages = imagePairs.flat();
 
   const handleImageClick = (index) => {
@@ -56,11 +79,12 @@ export default function NewHotelSlider() {
               1000: { slidesPerView: 4 },
             }}
           >
-            {flatImages.map((src, index) => (
+            {flatImages.map((img, index) => (
               <SwiperSlide key={index}>
                 <Image
-                  src={src}
-                  alt={`Gallery ${index}`}
+                  src={img.src}
+                  alt={img.alt}
+                  title={img.title}
                   className="w-100"
                   width={300}
                   height={200}
@@ -81,11 +105,10 @@ export default function NewHotelSlider() {
             open={lightboxOpen}
             close={() => setLightboxOpen(false)}
             index={lightboxIndex}
-            slides={flatImages.map((src) => ({ src }))}
+            slides={flatImages.map((img) => ({ src: img.src }))}
           />
         </div>
       </section>
     </>
-
   );
 }

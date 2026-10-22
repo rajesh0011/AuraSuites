@@ -7,6 +7,7 @@ import {
   FaInstagram,
   // FaTripadvisor
 } from "react-icons/fa";
+import NewsLetter from "./NewsLetter";
 
 const Footer = () => {
   return (
@@ -20,6 +21,7 @@ const Footer = () => {
                 <Image
                   src="/img/auara-logo-black.png"
                   alt="Aura Suites Logo"
+                  title="Aura suites logo"
                   width={100}
                   height={100}
                 />
@@ -37,29 +39,19 @@ const Footer = () => {
                 
               </div>
               {/* Newsletter Section */}
-                <div className="newslater mt-3">
-                      <h5>Join our news letter</h5>
-                      <div className="input-btn">
-                        <input type="text" placeholder="Enter your email..." className="form-control" />
-                        <button type="button" className="btn btn-primary">
-                          Submit
-                        </button>
-                      </div>
-                    <label className="agree mt-1">
-                      <input type="checkbox" className="checkbox-1"/>
-                           &nbsp; I agree to the <a className="text-primary" href="" >privacy policy</a>.
-                        </label>                 
-                </div>
+                <NewsLetter></NewsLetter>
             </div>
             {/* Center: Contact Links */}
             <div className="col-md-4 mb-4 mb-md-0 footer_menu align-items-center">
               <div className="mid-column-data">
                 <h5 className="">CONTACT US</h5>
               <ul className="list-unstyled footer_menu">
-                <li><a href="#" className="text-decoration-none">FAQs</a></li>
-                <li><a href="#" className="text-decoration-none">Terms & Conditions</a></li>
-                <li><a href="#" className="text-decoration-none">Security & Safety</a></li>
-                <li><a href="#" className="text-decoration-none">Privacy Policy</a></li>
+                {/* <li><a href="#" className="text-decoration-none">FAQs</a></li> */}
+                <li><a href="/blog" className="text-decoration-none">Blogs</a></li>
+                <li><a href="/faq" className="text-decoration-none">FAQs</a></li>
+                {/* <li><a href="#" className="text-decoration-none">Terms & Conditions</a></li>
+                <li><a href="#" className="text-decoration-none">Security & Safety</a></li> */}
+                <li><a href="/aura-suites-privacy-policy.pdf" target="_blank" className="text-decoration-none">Privacy Policy</a></li>
               </ul>
               <div className="footer_social2 mt-4">
                 <p className="mb-1">
@@ -101,7 +93,7 @@ const Footer = () => {
       </footer>
       <div className="copyright-section">
         <p>
-          Copyright ©2025, Aura Suites. All Rights Reserved. Powered By{" "}
+          Copyright ©2026, Aura Suites. All Rights Reserved. Powered By{" "}
           <a href="https://www.cinuniverse.com" target="_blank" rel="noopener noreferrer">
             CIN Universe
           </a>.

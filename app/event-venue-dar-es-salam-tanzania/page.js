@@ -4,10 +4,19 @@ import { useState } from "react";
 import { BookingEngineProvider } from "../context/BookingEngineContext";
 import FilterBar from "../Booking_engine/Filterbar";
 
+
+import Link from "next/link";
+import BookingEnquiryPopup from "../Booking_engine/BookingEnquiryPopup";
+ function handleMenuToggle() {
+    setClose(!close);
+  }
+
 import Image from "next/image";
 
 export default function Events() {
     const [isVisible, setIsVisible] = useState(false);
+
+    let [showPopup, setShowPopup] = useState(false);
     const eventData = [
         {
             title: "Orbit Conference Hall",
@@ -63,7 +72,23 @@ export default function Events() {
                                             <h2 className="heading">{item.title}</h2>
                                             <p className="description">{item.description}</p>
                                             <div className="text-left winter-box-btn">
-                                                <a href="#" className="box-btn know-more">Enquiry Now</a>
+                                                {/* <a href="#" className="box-btn know-more">Enquiry Now</a> */}
+
+                                                                                        <button
+                                            className="box-btn know-more mail-phone-desktop"
+                                            onClick={() => setShowPopup(true)}
+                                        >
+                                           Enquiry Now
+                                        </button>
+
+                                                                        {/* Mobile - Call */}
+                                            <Link
+                                                href="tel:+255746941286"
+                                                target="_blank"
+                                                className="box-btn know-more mail-phone-mobile"
+                                            >
+                                                 Enquiry Now
+                                            </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -83,7 +108,23 @@ export default function Events() {
                                             <h2 className="heading">{item.title}</h2>
                                             <p className="description">{item.description}</p>
                                             <div className="text-left winter-box-btn">
-                                                <a href="#" className="box-btn know-more">Enquiry Now</a>
+                                                {/* <a href="#" className="box-btn know-more">Enquiry Now</a> */}
+
+                                                <button
+                                            className="box-btn know-more mail-phone-desktop"
+                                            onClick={() => setShowPopup(true)}
+                                        >
+                                           Enquiry Now
+                                        </button>
+
+                                                                        {/* Mobile - Call */}
+                                            <Link
+                                                href="tel:+255746941286"
+                                                target="_blank"
+                                                className="box-btn know-more mail-phone-mobile"
+                                            >
+                                                 Enquiry Now
+                                            </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -95,6 +136,48 @@ export default function Events() {
                     
                 ))}
                 </div>
+
+
+                {showPopup && (
+                  <BookingEnquiryPopup
+                    propertyName="Aura Suites"
+                    mode="header"
+                    onClose={() => setShowPopup(false)}
+                  />
+                )}
+                
+                        <style>
+                      {
+                        `
+                       
+                              
+                         .mail-phone-desktop{
+                          display:inline
+                         }
+                
+                         .mail-phone-mobile{
+                          display:none
+                         }
+                
+                         @media(max-width: 768px){
+                            .mail-phone-desktop{
+                              display:none
+                            }
+                
+                            .mail-phone-mobile{
+                              display:inline
+                            }
+                
+                            //  .winter-box-btn {
+                            //     display: flex;
+                            //     align-items: revert;
+                            //     flex-direction: row;
+                            //     justify-content: center;
+                            // }
+                         }
+                        `
+                      }
+                    </style>
 
             </>
             )
